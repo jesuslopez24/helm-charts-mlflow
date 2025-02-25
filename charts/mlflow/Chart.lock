@@ -1,3 +1,7 @@
-dependencies: []
+dependencies:
+  - name: postgresql
+    version: "^15.2.0"
+    repository: oci://registry-1.docker.io/bitnamicharts
+    condition: postgresql.enabled
 digest: sha256:643d5437104296e21d906ecb15b2c96ad278f20cfc4af53b12bb6069bd853726
 generated: "2022-04-17T16:18:20.66991133Z"
