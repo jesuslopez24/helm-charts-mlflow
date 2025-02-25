@@ -99,6 +99,23 @@ backendStore:
     # -- postgres database connection driver. e.g.: "psycopg2"
     driver: ""
 
+
+postgresql:
+  # postgresql.enabled -- Whether to deploy a PostgreSQL server to satisfy the applications database requirements. To use an external PostgreSQL set this to false and configure the externalPostgreSQL parameter.
+  enabled: false
+  primary:
+    service:
+      ports:
+        postgresql: 5432
+  auth:
+    # postgresql.auth.username -- PostgreSQL username for redash user (when postgresql chart enabled)
+    username: mlflow
+    # postgresql.auth.password -- REQUIRED: PostgreSQL password for redash user (when postgresql chart enabled)
+    password:
+  # postgresql.auth.database -- PostgreSQL database name (when postgresql chart enabled)
+    database: mlflow
+    
+
   mysql:
     # -- Specifies if you want to use mysql backend storage
     enabled: false
