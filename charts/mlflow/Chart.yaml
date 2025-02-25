@@ -91,4 +91,8 @@ annotations:
     fingerprint: 939B1A0ED8AAA8E722ACCDB3B6A012EE8A76426A
     url: https://keybase.io/communitycharts/pgp_keys.asc
 
-dependencies: []
+dependencies:
+  - name: postgresql
+    version: "^15.2.0"
+    repository: oci://registry-1.docker.io/bitnamicharts
+    condition: postgresql.enabled
